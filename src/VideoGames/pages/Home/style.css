@@ -1,0 +1,33 @@
+.containerHomePage {
+  background-color: #0C0C0D;
+  margin: 0;
+  padding: 0;
+}
+
+.cajasInfo {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.img {
+  filter: drop-shadow(0 0 4rem #cdff06);
+}
+
+.h1Video {
+  color: #cdff06;
+}
+
+.boxPlataform {
+  border: 1px solid white;
+}
+
+div > .columna {
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+div > .columna:hover {
+  cursor: pointer;
+  border: 4px solid black;
+  transition: border 0.1s linear;
+}

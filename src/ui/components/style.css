@@ -1,0 +1,46 @@
+
+.nav-link{
+    font-size: 15px;
+}
+
+.dropdown-item {
+    font-size: 15px;
+}
+
+.containerNavbar {
+    background-color: #0C0C0D;
+}
+
+.titleNav {
+    color: #cdff06;
+}
+
+
+li:hover {
+    color: #cdff06;
+}
+
+.navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-nav > li > a:hover {
+    color:rgb(1,220,131);
+    /* color: rgb(1,220,131); */
+}
+
+.backGroundDropDown{
+    background-color: #131314;
+}
+
+.dropdown-itemColor {
+    color: white;
+}
+
+.dropdown-itemColor:hover {
+    background-color: #0C0C0D;
+    border: 1px solid rgb(1,220,131);
+    color: rgb(1,220,131);
+    border-radius: 10px;
+    transition: border-width 0.6s linear;
+}
