@@ -1,10 +1,11 @@
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/consola-de-juego.png';
 import { useAuthStore } from '../../hooks/useAuthStore';
 import './style.css';
 
 export const Navbar = () => {
     const { user, startLogout } = useAuthStore();
+    const navigate = useNavigate();
 
     const isLogin = () => {
         const { name } = user;
@@ -12,11 +13,8 @@ export const Navbar = () => {
             <>
                 {
                     name ? <>
-                        <li className='nav-item'>
-                            <a className="nav-link px-4" href="#"> <i className="fas fa-user fa-lg"></i> </a>
-                        </li>
-                        <li className='nav-item'>
-                            <a className="nav-link" href="#" onClick={onLogout}> <i className="fas fa-sign-out-alt fa-lg"></i></a>
+                        <li className='nav-item' style={{ cursor: 'pointer' }}>
+                            <a className="" href="#" onClick={onLogout}> <i className="bi bi-box-arrow-right fs-4"></i></a>
                         </li>
                     </>
                         : <></>
@@ -30,7 +28,7 @@ export const Navbar = () => {
     }
 
     const onAccount = () => {
-        Navigate('/login')
+        navigate('/auth/loginLayout');
     }
 
     return (
@@ -43,7 +41,7 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link px-5" href="#">Home</a>
+                            <a className="nav-link px-5" href='/'>Home</a>
                         </li>
                         <li className="nav-item dropdown px-3">
                             <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,12 +56,9 @@ export const Navbar = () => {
                         <li className="nav-item px-4" style={{ marginRight: '22px' }}>
                             <a className="nav-link" href="#">Ofertas</a>
                         </li>
-                        <li className='nav-item' style={{ cursor: 'pointer' }}>
+                        <li className='nav-item' style={{ cursor: 'pointer', marginRight: '30px' }}>
                             <a className='' onClick={onAccount}><i className="bi bi-person-circle fs-4"></i></a>
                         </li>
-                        {/* <li className='nav-item px-3'>
-                            <a className='nav-link' href='#'><i className="bi bi-person-circle fs-4"></i></a>
-                        </li> */}
                         {isLogin()}
                     </ul>
                 </div>

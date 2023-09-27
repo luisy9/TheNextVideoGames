@@ -1,5 +1,4 @@
-import { Route } from 'react-router-dom'
-import { PlataformasLayout } from '../pages/Plataformas'
+import { useNavigate } from 'react-router-dom'
 import ps from '../../assets/ps-logo.jpg';
 import xbox from '../../assets/xbox-logo.jpg';
 import nintendo from '../../assets/nintendo-logo.webp';
@@ -7,6 +6,14 @@ import Atropos from 'atropos/react';
 import './styles.css';
 
 export const Plataformas = () => {
+
+    const navigate = useNavigate();
+    
+    const navigateTo = (to) => {
+        navigate(to);
+    }
+
+
     return (
         <div className='container-fluid pt-4'>
             <div className='container-lg'>
@@ -19,7 +26,7 @@ export const Plataformas = () => {
                             className="atropos-banner"
                             highlight={false}
                             style={{ cursor: 'pointer' }}
-                            onClick={() => console.log("enter")}
+                            onClick={() => navigateTo(`/Plataforma/${'PlayStation'}`)}
                         >
                             <img src={ps} className="atropos-banner-spacer" alt="Imagen 1" data-atropos-offset="5" />
                             <img src={ps} data-atropos-offset="-5" alt="Imagen 1" />
@@ -34,7 +41,7 @@ export const Plataformas = () => {
                             className="atropos-banner col-md-4"
                             highlight={false}
                             style={{ cursor: 'pointer' }}
-                            onClick={() => console.log("enter")}
+                            onClick={() => navigateTo('/Plataforma/Xbox')}
                         >
                             <img src={xbox} className="atropos-banner-spacer" alt="Imagen 1" data-atropos-offset="5" />
                             <img src={xbox} data-atropos-offset="-5" alt="Imagen 1" />
@@ -50,7 +57,7 @@ export const Plataformas = () => {
                             className="atropos-banner col-md-4"
                             highlight={false}
                             style={{ cursor: 'pointer' }}
-                            onClick={() => console.log("enter")}
+                            onClick={() => navigateTo('/Plataforma/Nintendo')}
                         >
                             <img src={nintendo} className="atropos-banner-spacer" alt="Imagen 1" data-atropos-offset="5" />
                             <img src={nintendo} data-atropos-offset="-5" alt="Imagen 1" />

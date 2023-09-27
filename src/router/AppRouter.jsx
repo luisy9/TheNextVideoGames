@@ -16,6 +16,7 @@ export const AppRouter = () => {
         checkIsLogin();
     }, [])
 
+
     if (status === 'checking') {
         return (
             <LoadingPage />
@@ -28,39 +29,16 @@ export const AppRouter = () => {
             <Route element={<PublicRoute />}>
                 <Route path="/*" element={<Navigate to="/" />} />
                 <Route element={<HomePage />} path="/" exact />
-                <Route element={<LoginLayaout />} path="/auth/loginLayout" exact/>
+                <Route element={<LoginLayaout />} path="/auth/loginLayout" exact />
             </Route>
 
 
-           { /* Authenticated */}
+            { /* Authenticated */}
             <Route element={<PrivateRouter />}>
-                <Route element={<PlataformasLayout />} path="/PlayStation" exact />
+                <Route element={<HomePage />} path="/" exact />
+                <Route element={<PlataformasLayout />} path="/Plataforma/:name" exact />
+                <Route element={<HomePage />} path="/auth/*" exact />
             </Route>
-            {
-                // (
-                //     status === 'not-authenticated'
-                // ) ?
-                //     (
-                //         <>
-                //             <Route path="/auth/*" element={<LoginLayaout />} />
-                //             <Route path="/*" element={<Navigate to="/auth/loginLayout" />} />
-                //         </>
-                //     )
-
-                //     :
-
-                // (
-                //     <>
-                //         <Route path="/" element={<HomePage />} />
-                //         <Route path="/*" element={<Navigate to="/" />} />
-                //     </>
-                // )
-            }
-
-            {/* <Route path="/*" element={}>
-
-
-</Route> */}
         </Routes>
     )
 }
