@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { useAuthStore } from '../hooks';
 import { HomePage, PlataformasLayout } from '../VideoGames';
 import { LoginLayaout, LoadingPage } from '../ui/pages'
+import { VentaVideoGame } from '../VideoGames/pages/VentaVideoGame'
 
 
 import PublicRoute from "./Public/PublicRouter";
@@ -38,6 +39,7 @@ export const AppRouter = () => {
                 <Route element={<HomePage />} path="/" exact />
                 <Route element={<PlataformasLayout />} path="/Plataforma/:name" exact />
                 <Route element={<HomePage />} path="/auth/*" exact />
+                <Route element={<VentaVideoGame />} path="/venta/:name" exact />
             </Route>
         </Routes>
     )

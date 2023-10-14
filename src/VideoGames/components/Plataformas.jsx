@@ -1,26 +1,24 @@
 import { useNavigate } from 'react-router-dom'
-import ps from '../../assets/ps-logo.jpg';
-import xbox from '../../assets/xbox-logo.jpg';
-import nintendo from '../../assets/nintendo-logo.webp';
-import Atropos from 'atropos/react';
-import './styles.css';
+import ps from '../../assets/ps-logo.jpg'
+import xbox from '../../assets/xbox-logo.jpg'
+import nintendo from '../../assets/nintendo-logo.webp'
+import Atropos from 'atropos/react'
+import './styles.css'
 
 export const Plataformas = () => {
+  const navigate = useNavigate()
 
-    const navigate = useNavigate();
-    
-    const navigateTo = (to) => {
-        navigate(to);
-    }
+  const navigateTo = (to) => {
+    navigate(to)
+  }
 
-
-    return (
-        <div className='container-fluid pt-4'>
-            <div className='container-lg'>
+  return (
+        <div className='pt-4'>
+            <div className='px-5'>
                 <div className='pt-5 pb-5 box'>
                     <h1 className=''>Elige tu <span className='gradient-text'>plataforma</span></h1>
                 </div>
-                <div className='row'>
+                <div className='row justify-content-between'>
                     <div className='col-md-4'>
                         <Atropos
                             className="atropos-banner"
@@ -38,7 +36,7 @@ export const Plataformas = () => {
                     </div>
                     <div className='col-md-4 iconXBOX'>
                         <Atropos
-                            className="atropos-banner col-md-4"
+                            className="atropos-banner"
                             highlight={false}
                             style={{ cursor: 'pointer' }}
                             onClick={() => navigateTo('/Plataforma/Xbox')}
@@ -54,7 +52,7 @@ export const Plataformas = () => {
                     </div>
                     <div className='col-md-4'>
                         <Atropos
-                            className="atropos-banner col-md-4"
+                            className="atropos-banner"
                             highlight={false}
                             style={{ cursor: 'pointer' }}
                             onClick={() => navigateTo('/Plataforma/Nintendo')}
@@ -73,7 +71,7 @@ export const Plataformas = () => {
             </div>
         </div>
 
-    )
+  )
 }
 
 export default Plataformas

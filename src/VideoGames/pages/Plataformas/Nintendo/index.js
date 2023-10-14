@@ -1,1 +1,1 @@
-export * from './Nintendo';
+export * from './Nintendo'

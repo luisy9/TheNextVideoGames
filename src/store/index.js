@@ -1,3 +1,3 @@
-export * from './store';
-export * from './Slices/auth/authSlice';
-export * from './Slices/videoGames/videoGamesSlice';
+export * from './store'
+export * from './Slices/auth/authSlice'
+export * from './Slices/videoGames/videoGamesSlice'

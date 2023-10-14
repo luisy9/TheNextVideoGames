@@ -1,1 +1,1 @@
-export * from './PlayStation';
+export * from './PlayStation'

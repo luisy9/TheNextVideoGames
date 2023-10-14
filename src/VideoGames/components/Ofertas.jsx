@@ -1,7 +1,7 @@
 export const Ofertas = () => {
   return (
     <div>
-      
+
     </div>
   )
 }

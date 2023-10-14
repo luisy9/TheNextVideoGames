@@ -1,11 +1,9 @@
-.container {
-  padding: 0px 40px;
-  max-width: 960px;
-  margin: 32px auto;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
+.columna-texto {
+  background-color: red;
+}
+
+.col-md-8 {
+  margin: 0 0;
 }
 
 .atropos-banner {
@@ -140,21 +138,23 @@ span {
   -webkit-background-clip: text;
 }
 
-
 .botonYa-Disponible {
-  background: 
-        linear-gradient(#0f0f0f, #0f0f0f) padding-box,
-        linear-gradient(60deg, rgb(23, 168, 159), rgb(1, 220, 131)) border-box;
-      color: white;
-      font: bold;
-      padding: 10px 12px;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      display: inline-block;
-      font-size: 13px;
+  background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
+    linear-gradient(60deg, rgb(23, 168, 159), rgb(1, 220, 131)) border-box;
+  color: white;
+  font: bold;
+  padding: 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 13px;
 }
 
 .botonYa-Disponible:hover {
   filter: drop-shadow(0 0 0.5em rgb(1, 220, 131));
   transition: 0.2s;
+}
+
+.col-md-3 {
+
 }

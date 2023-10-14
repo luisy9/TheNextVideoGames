@@ -1,5 +1,5 @@
 export const Buscador = () => {
-    return (
+  return (
         <div className="container-lg pt-5">
             <h1>Busca tu <span className="gradient-text">VideoJuego</span></h1>
             <div className="container d-flex justify-content-center">
@@ -11,7 +11,7 @@ export const Buscador = () => {
                 </div>
             </div>
         </div>
-    )
+  )
 }
 
-export default Buscador;
+export default Buscador

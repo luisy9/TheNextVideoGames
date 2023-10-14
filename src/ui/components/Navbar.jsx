@@ -32,8 +32,8 @@ export const Navbar = () => {
     }
 
     return (
-        <div className='container-lg'>
-            <nav className="navbar navbar-expand-lg containerNavbar container-fluid">
+        <div className='px-5'>
+            <nav className="navbar navbar-expand-sm containerNavbar">
                 <img src={logo} alt='logo' /><a className="navbar-brand" href="#"><span className='gradient-text'>TheNext</span><span className='text-white'>VideoGames</span></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

@@ -1,7 +1,7 @@
 .containerHomePage {
-  background-color: #0C0C0D;
-  margin: 0;
-  padding: 0;
+  background-color: #0c0c0d;
+  max-width: 2000px;
+  /* padding: 0 3rem; */
 }
 
 .cajasInfo {

@@ -1,17 +1,16 @@
-import { useEffect } from "react";
-import { useVideoGames } from "../../../../hooks";
-import { CardsVideoGames } from './components';
-import logo_ps from '../../../../assets/banner-ps.jpg';
+import { useEffect } from 'react'
+import { useVideoGames } from '../../../../hooks'
+import { CardsVideoGames } from './components'
+import logo_ps from '../../../../assets/banner-ps.jpg'
 
 export const PlayStation = () => {
-
-  const { getVideoGames, plataform } = useVideoGames('PlayStation');
+  const { getVideoGames, plataform } = useVideoGames('PlayStation')
 
   useEffect(() => {
-    getVideoGames();
-  },[]);
+    getVideoGames()
+  }, [])
 
-   return (
+  return (
     <div>
       <div className="container-fluid">
         <div className="container-lg">

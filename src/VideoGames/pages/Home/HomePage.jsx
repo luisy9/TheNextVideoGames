@@ -7,15 +7,15 @@ import Buscador from '../../components/Buscador';
 export const HomePage = () => {
     return (
         <>
-            <div className='container-fluid containerHomePage'>
-                <div className="pt-5">
+            <div className='containerHomePage'>
+                <div className='container'>
                     <Presentation />
-                    <div className='container-fluid'>
-                        <Plataformas />
-                    </div>
-                    <div className='container-fluid'>
-                        <Buscador />
-                    </div>
+                </div>
+                <div className='container-fluid'>
+                    <Plataformas />
+                </div>
+                <div className='container-fluid'>
+                    <Buscador />
                 </div>
             </div>
         </>

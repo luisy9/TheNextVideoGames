@@ -1,14 +1,9 @@
-// import React from 'react'
+export const App = () => {
+  return (
+    <div className="">
 
-// export const App = () => {
-//   return (
-//     <div>
-//       <Router>
-//         <Navbar />
+    </div>
+  )
+}
 
-//       </Router>
-//     </div>
-//   )
-// }
-
-// export default App
+export default App
