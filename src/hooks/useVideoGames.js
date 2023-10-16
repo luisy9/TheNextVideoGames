@@ -1,11 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { calendarApi } from '../api';
-import { onVideoGames } from '../store';
+import { onVideoGames, newBuy } from '../store';
 
 export const useVideoGames = () => {
   const dispatch = useDispatch();
   const [plataform, setPlataform] = useState(null);
+  const [ game, setGame ] = useState(null);
 
   const getVideoGames = async ({ name }) => {
     try {
@@ -19,11 +20,23 @@ export const useVideoGames = () => {
     }
   };
 
-  // const memorizeData = useMemo(() => plataform, [plataform]);
+  const videoGame = async ({ name }) => {
+    try {
+      const { data } = await calendarApi.post('/videoGames/getVideoGame', {
+        idvideogame: name
+      })
+
+      dispatch(newBuy(data.result));
+      setGame(data.result);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return {
     plataform,
     getVideoGames,
-    // videoGame,
+    videoGame,
   };
 };

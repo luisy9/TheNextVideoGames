@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { useVideoGames } from '../../../hooks/useVideoGames';
-import { useEffect } from 'react';
+import { VideoGames } from './components'
 
 export const PlataformasLayout = () => {
     const params = useParams();
@@ -13,9 +14,10 @@ export const PlataformasLayout = () => {
 
     return (
         <div className="">
-            
+            {
+                plataform === null ? <></> : <VideoGames plataform={plataform} />
+            }
         </div>
     )
 }
-
 export default PlataformasLayout
