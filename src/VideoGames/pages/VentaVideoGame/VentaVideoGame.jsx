@@ -3,7 +3,9 @@ import { useVideoGames } from '../../../hooks/useVideoGames'
 
 export const VentaVideoGame = () => {
   const params = useParams();
-  const { videoGame } = useVideoGames(params);
+  const { videoGame } = useVideoGames();
+
+  // videoGame(params);
 
   return (
     <div className="">

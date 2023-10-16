@@ -3,39 +3,27 @@ import { useDispatch } from 'react-redux';
 import { calendarApi } from '../api';
 import { onVideoGames } from '../store';
 
-export const useVideoGames = (nombre_plataform, idGame = '') => {
+export const useVideoGames = () => {
   const dispatch = useDispatch();
-  const [plataform, setPlataform] = useState([]);
+  const [plataform, setPlataform] = useState(null);
 
-  const getVideoGames = async (nombre_plataform) => {
-    const { nombre_plataform: name } = nombre_plataform;
+  const getVideoGames = async ({ name }) => {
     try {
-      const response = await calendarApi.post('/videoGames/getVideoGames', {
-        nombre_plataform,
+      const { data } = await calendarApi.post('/videoGames/getVideoGames', {
+        name,
       });
-      console.log(response);
-      dispatch(onVideoGames(response.data.result));
-      setPlataform(response.data.result);
-    } catch (err) {
-      console.log(err);
+      dispatch(onVideoGames(data.result));
+      setPlataform(data.result);
+    } catch (error) {
+      console.log(error);
     }
   };
 
-  const videoGame = async () => {
-    try {
-      const { data } = await calendarApi.post('/', {
-        id: idGame,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const memorizeData = useMemo(() => plataform, [plataform]);
+  // const memorizeData = useMemo(() => plataform, [plataform]);
 
   return {
-    plataform: memorizeData,
+    plataform,
     getVideoGames,
-    videoGame,
+    // videoGame,
   };
 };
